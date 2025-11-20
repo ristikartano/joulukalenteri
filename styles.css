@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Berkshire+Swash&family=Story+Script&display=swap');
+
+h1 { font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+body {
+    margin: 5px;
+    padding: 10px;
+    background-image: url("tausta.jpg");
+    background-size: cover;         /* kuva täyttää koko sivun */
+    background-position: center;    /* kuva keskitetään */
+    background-repeat: no-repeat;   /* ei toisteta */
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 600px;
+    margin: 56px auto;
+    text-align: center;
+}
+
+div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    
+}
+
+.luukku {
+    position: relative;            /* tarvitaan tekstin sijoitteluun */
+    text-align: left;              /* numero vasemmalle */
+    padding-top: 10px;              /* pieni siirto ylös */
+    padding-left: 5px;             /* pieni siirto vasemmalle */
+
+    background-image: url("rusetti.jpg");
+    background-size: cover;
+    border: 2px solid #de0f0f;
+    border-radius: 10px;
+    padding: 20px;                 /* alkuperäinen padding -> tämä säilyttää koon */
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2f3f;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+
+
+.luukku:hover {
+    background-color: #cfe3ff;
+    transform: scale(1.05);
+}
+
+#luukku1 {
+
+
+}
+
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
